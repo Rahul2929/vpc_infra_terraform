@@ -1,6 +1,6 @@
 This repo helps to build vpc infrastructure in AWS with the help of terraform modules.
 
-DESCRIPTION
+<B> DESCRIPTION </B>
 
 		Repo helps in building below AWS services
 		----------------------------------------- 
@@ -14,13 +14,13 @@ DESCRIPTION
 
 -> Create 2 SecurityGroup one for each frontend and backend ec2 instance 
 
-PREREQUISITE
+<B> PREREQUISITE </B>
 
 -> AWS account
 
 -> ACCESS KEY & SECRET KEY for your account present in credentials file inside your $HOME/.aws directory. 
 
-RUN
+<B> RUN </B>
 
 -> Set $TF_VAR_subnet_cidr value as a list.
 
