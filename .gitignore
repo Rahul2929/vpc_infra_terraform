@@ -1,3 +1,4 @@
 # Ignore below files and folders
 .terraform/
 test/.terraform/
+*.tfstate
