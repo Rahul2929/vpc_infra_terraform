@@ -3,3 +3,4 @@
 test/.terraform/
 *.tfstate
 *.swp
+*.tfstate.backup

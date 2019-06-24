@@ -1,4 +1,6 @@
-variable "vpc_cidr" {}
+variable "vpc_cidr" {
+  default = "192.168.0.0/24"
+}
 
 variable "vpc_tag" {}
 
@@ -7,6 +9,9 @@ variable "subnet_tag" {
   default = ["public_sub", "private_sub"]
 }
 
-variable "availability_zone" {}
+variable "subnet_cidrs" {
+  type = "list"
+  default = ["192.168.0.0/25", "192.168.0.128/25"]
+}
 
-variable "subnet_cidrs" {}
+variable "availability_zone" {}

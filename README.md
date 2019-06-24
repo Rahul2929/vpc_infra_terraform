@@ -22,10 +22,6 @@ This repo helps to build vpc infrastructure in AWS with the help of terraform mo
 
 <B> RUN </B>
 
--> Set $TF_VAR_subnet_cidr value as a list.
-
-   EXAMPLE: export $TF_VAR_subnet_cidr = '["192.168.0.0/25", "192.168.0.128/25"]'
-
 -> Navigate to test folder and run below command
    
    RUN "terraform init"
