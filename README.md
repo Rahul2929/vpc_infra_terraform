@@ -22,8 +22,12 @@ This repo helps to build vpc infrastructure in AWS with the help of terraform mo
 
 <B> RUN </B>
 
+-> Checkout workspace
+ 
+   RUN "terraform workspace new dev" ( Creating dev workspace to store tfstate file )
+
 -> Navigate to test folder and run below command
    
    RUN "terraform init"
    
-   RUN "terraform apply"
+   RUN "terraform apply -var-file=dev.tfvars"
