@@ -5,16 +5,10 @@ provider "aws" {
 }
 
 
-variable "subnet_cidr" {
-	type = "list"
-}
-
 module "test_vpc" {
         source      = "../modules/vpc"
-        vpc_cidr    = "192.168.0.0/24"
         vpc_tag     = "test_vpc"
         availability_zone = "ap-south-1a"
-        subnet_cidrs = "${var.subnet_cidr}"
 }
 
 
@@ -27,7 +21,7 @@ module "networking" {
 module "security" {
 	source		= "../modules/securityGroup"
         vpc_id		= "${module.test_vpc.vpc_id}"
-        public_subnet_cidr   = "${var.subnet_cidr}"
+        public_subnet_cidr   = "${module.test_vpc.subnets}"
 }
 
 module "test_ec2" {
